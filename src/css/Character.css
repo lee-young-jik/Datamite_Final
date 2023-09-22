@@ -1,0 +1,170 @@
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    height:30px;
+    margin-bottom: 8px;
+}
+
+.img-checkbox { 
+    margin-left: 40px;
+    /* 체크박스간에 간격 조절 */
+}
+
+.img-text {
+    margin-left: 10px;
+    /* 이걸 조절하면 체크박스와 텍스트 박스 간의 거리가 조절됨 */
+}
+
+.image-item1-container {
+    position: relative;
+    margin-left: 458px;
+    margin-top: 350px;
+    z-index : 2; /* z-index가 높을수록 앞에 나타남 + z-index가 있어야 겹칠 수 있음 */
+}
+
+.image-item2-container {
+    position: relative;
+    margin-left: 450px;
+    margin-top: -4px;
+    z-index: 2;
+    
+}
+
+.image-item3-container {
+    position: relative;
+    margin-left: 498px;
+    margin-top: -81px;
+    z-index: 2;
+}
+
+.image-item4-container {
+    position: relative;
+    margin-left: 374px;
+    margin-top: -81px;
+    z-index: 1;
+    
+}
+
+.image-item5-container {
+    position: relative;
+    margin-left: 443px;
+    margin-top: -13px;
+    margin-bottom: 500px;
+}
+
+.image-item1 {
+    transition: filter 0.3s, transform 0.3s;
+    /* 부드러운 변환 효과 */
+}
+
+.checkbox-container1 {  /* 머리+목 */
+
+    display:none; /* 활성화 안되면 안보이게 */
+    position: absolute; /* 체크박스와 텍스트 박스를 절대 위치로 설정 */
+    top:-300%;
+    /* top은 절대위치로 지정된 요소의 상단 여백을 지정한다. */
+    left: 40px; /* 이미지 바로 오른쪽에 위치 */
+    
+    /* 자식 요소들을 가로로 배치 */
+    flex-direction: row;
+    /* 자식 요소들을 세로 중앙에 배치 */
+    align-items: center;
+}
+
+.checkbox-container2 {  /* 상체 */
+
+    display:none; /* 활성화 안되면 안보이게 */
+    position: absolute; /* 체크박스와 텍스트 박스를 절대 위치로 설정 */
+    top: -200%;
+    left: -240px; /* 이미지 바로 오른쪽에 위치 */
+}
+
+.checkbox-container3 {  /* 오른팔 */
+
+    display:none; /* 활성화 안되면 안보이게 */
+    position: absolute; /* 체크박스와 텍스트 박스를 절대 위치로 설정 */
+    top: 80%;
+    left: 100px; /* 이미지 바로 오른쪽에 위치 */
+
+}
+
+.checkbox-container4 {  /* 왼팔 */
+
+    display:none; /* 활성화 안되면 안보이게 */
+    position: absolute; /* 체크박스와 텍스트 박스를 절대 위치로 설정 */
+    top:60%;
+    left: -180px; /* 이미지 바로 오른쪽에 위치 */
+
+}
+
+.checkbox-container5 {  /* 하체 */
+
+    display:none; /* 활성화 안되면 안보이게 */
+    position: absolute; /* 체크박스와 텍스트 박스를 절대 위치로 설정 */
+    top: 125%;
+    left: 5%; /* 이미지 바로 오른쪽에 위치 */
+
+}
+
+.image-item1:hover /* 이미지에 마우스를 올려야 hover */,
+.image-item1-container.active .image-item1{
+    z-index: 5;
+    filter: hue-rotate(240deg);
+    transform: scale(1.05);
+}
+
+.image-item1:hover ~ .checkbox-container1,
+/* ~는 css의 첫번째 요소 뒤에 나오는 두번째 요소를 선택
+- image-item1의 hover나 active 상태일 때 checkbox-container1을 선택하여 표시 */
+.image-item1-container.active .checkbox-container1 {
+    display: flex;
+    /* 이미지에 호버하거나 클릭했을 때 표시 */
+}
+
+.image-item2:hover,
+.image-item2-container.active .image-item2{
+    z-index: 5;
+    filter: hue-rotate(240deg);
+    transform: scale(1.05);
+}
+
+.image-item2:hover ~ .checkbox-container2,
+.image-item2-container.active .checkbox-container2 {
+    display: inline-block;
+}
+
+.image-item3:hover,
+.image-item3-container.active .image-item3{
+    z-index: 5;
+    filter: hue-rotate(240deg);
+    transform: scale(1.05);
+}
+
+.image-item3:hover ~ .checkbox-container3,
+.image-item3-container.active .checkbox-container3 {
+    display: inline-block;
+}
+
+.image-item4:hover,
+.image-item4-container.active .image-item4{
+    z-index: 5;
+    filter: hue-rotate(240deg);
+    transform: scale(1.05);
+}
+
+.image-item4:hover ~ .checkbox-container4,
+.image-item4-container.active .checkbox-container4 {
+    display: inline-block;
+}
+
+.image-item5:hover,
+.image-item5-container.active .image-item5{
+    z-index: 5;
+    filter: hue-rotate(240deg);
+    transform: scale(1.05);
+}
+
+.image-item5:hover ~ .checkbox-container5,
+.image-item5-container.active .checkbox-container5 {
+    display: inline-block;
+}

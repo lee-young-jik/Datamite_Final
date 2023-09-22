@@ -1,0 +1,84 @@
+
+.input-icon-placeholder1 {
+    /* id */
+    background-image: url('../assets/image/name.png');
+    background-repeat: no-repeat;
+    background-position: 10px center; 
+    padding-left: 38px;  /* 아이콘의 너비에 따라 조정해주세요 */
+    background-size: 20px;  /* 아이콘의 크기에 따라 조정해주세요 */
+}
+
+
+.input-icon-placeholder2 {
+    /* pw */
+    background-image: url('../assets/image/password.png');
+    background-repeat: no-repeat;
+    background-position: 10px center; 
+    padding-left: 40px;  /* 아이콘의 너비에 따라 조정해주세요 */
+    background-size: 20px;  /* 아이콘의 크기에 따라 조정해주세요 */
+}
+
+.input-icon-placeholder3 {
+    /* name */
+    background-image: url('../assets/image/name.png');
+    background-repeat: no-repeat;
+    background-position: 10px center; 
+    padding-left: 40px;  /* 아이콘의 너비에 따라 조정해주세요 */
+    background-size: 20px;  /* 아이콘의 크기에 따라 조정해주세요 */
+}
+
+.input-icon-placeholder4 {
+    /* birthday */
+    background-image: url('../assets/image/birthday.png');
+    background-repeat: no-repeat;
+    background-position: 10px center; 
+    padding-left: 40px;  /* 아이콘의 너비에 따라 조정해주세요 */
+    background-size: 20px;  /* 아이콘의 크기에 따라 조정해주세요 */
+}
+
+.input-icon-placeholder5 {
+    /* email */
+    background-image: url('../assets/image/email.png');
+    background-repeat: no-repeat;
+    background-position: 10px center; 
+    padding-left: 40px;  /* 아이콘의 너비에 따라 조정해주세요 */
+    background-size: 20px;  /* 아이콘의 크기에 따라 조정해주세요 */
+}
+
+
+.google-image {
+    width: 20px ;
+    height: 20px ;
+    margin-right: 80px;
+    
+}
+
+.googleCard {
+    width: 70px ;
+    height: 70px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.naver-image {
+    width: 23px ;
+    height: 23px ;
+    margin-right: 80px;
+    
+}
+
+.kakao-image {
+    width: 22px ;
+    height: 22px ;
+    margin-right: 80px;
+    
+}
+
+.googleCard {
+    width: 70px ;
+    height: 70px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

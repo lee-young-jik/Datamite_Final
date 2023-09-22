@@ -1,0 +1,47 @@
+.AppBar {
+    height: auto;
+}
+
+.Toolbar {
+    height: 64px;
+}
+
+.AppBar-image {
+    height: 80%;
+    width: auto;
+}
+
+.HomeLink {
+    text-decoration: none;
+    color: white;
+}
+
+.custom-control-label .MuiFormControlLabel-label {
+    width: 25px;
+    white-space: nowrap; /* 줄바꿈 방지 */ 
+}
+
+.flex-container {
+    display: flex;
+    gap: 80px; /* 요소들 사이에 공간을 추가합니다 */
+    align-items: center;
+}
+
+.drawer .MuiDrawer-paper {
+    background-color : #1976d2;
+    top : 102px; 
+    /* AppBar 아래에서 시작하기 위해 필요한데 이거 나중에 깔끔하게 할 필요가 있음. */
+    z-index:1000; /* AppBar의 기본 z-index보다 낮은 값 */
+}
+
+.drawer-menus {
+    width: 150px ;
+    padding-top: 40px;
+    color:white;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;  /* 밑줄 제거 */
+    color: inherit;         /* 현재의 글자 색상을 상속받음 */
+}

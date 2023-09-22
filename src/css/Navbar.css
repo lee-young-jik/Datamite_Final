@@ -1,0 +1,84 @@
+.container-fixed {
+    display: grid;
+}
+
+/* 모든 화면 크기에서 navbar 항목들 보이기 */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    max-width: 1400px;  /* 뷰포트의 100% 너비일 때, 즉 지금 보고 있는 뷰포트에 맞게 조절 */
+    min-width: 200px;
+}
+
+/* 1200px 이하의 화면 너비에서는 햄버거 메뉴 버튼을 표시. */
+@media (max-width:1600px){
+    /* @media를 사용한 미디어 쿼리의 스타일은 특정 조건을
+    만족하는 웹 페이지의 모든 요소에 적용될 수 있다*/
+
+    .navbar {
+        display: flex ;
+        flex-direction: row;
+        overflow: auto;
+        max-width: 100vw ;
+        flex-wrap: wrap; /* 아이템들이 화면 크기에 따라 줄바꿈되도록  */
+        min-width: 200px ;
+    }
+
+    .right-nav {
+        margin-left: auto ;
+        margin-right: 3vw;
+    }
+    
+    .middle-nav {
+        margin-left: auto ;
+        margin-bottom: 1vh;
+        display: flex;
+    }
+
+
+    .nav-link {
+        font-size: 95% ;
+    }
+    
+}
+
+.logo-image {
+    width: 45px;
+    height: 38px;
+    /* 고정된 픽셀값보다는 상대적인 단위를 사용 %,fr,vh,vw */
+    /* fr은 fraction의 약자 - 사용 가능한 공간의 일부 - 자동으로 나누어 그리드 아이템에 할당 */
+}
+
+
+@font-face {
+    font-family: '잘난체';
+    src: url("../assets/font/JALNAN.TTF") format("truetype");
+}
+
+.textLogo {
+    font-family: '잘난체', sans-serif;
+    margin-top: 10%;
+}
+
+.menus {
+    /* font-family: '잘난체', sans-serif; */
+    color:rgb(132, 131, 131);
+}
+
+
+
+
+.navbar.bg-body-tertiary {
+    background-color: white !important;
+    /* !important를 사용하여 다른 스타일들보다 우선순위를 높임 */
+}
+
+.navbar-collapse {
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 2vw;
+    /* 항목 간 간격 조절 */
+}

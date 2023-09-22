@@ -1,0 +1,121 @@
+.chat-time {
+    font-size: 1ch;
+    /* 현재 폰트에서 0(제로) 글자의 너비에 기반한 단위라는데 상대적인 단위를 사용하는 거긴함 */
+    margin-bottom: 2vh;
+}
+
+.flex-container {
+    display: flex;  /* flexbox 사용 */
+    align-items: flex-end;  /* 이 속성이 아이템들을 세로축의 아래쪽으로 정렬 */
+    gap: 0.8vw;
+    
+}
+
+.today-bubble {
+    display: grid;
+    margin-top: 10px;
+    margin-left: auto;  /* left랑 right auto로 해두면 중앙 정렬 */
+    margin-right: auto;
+    display: flex;
+    justify-content: center;  /* 가로축 방향으로 '텍스트' 중앙 정렬 */
+    align-items: center;  /* 세로축 방향으로 '텍스트' 중앙 정렬 */
+    max-width: 110px;
+    background: #73a2a2;
+    color: white;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.chatbot-bar {
+    
+    width: 100%;
+    height: 50px;
+    background-color: #84e1f6;
+    display: flex;  /* flex 디자인은 동적인 크기 조절, 반응형 디자인 용이, 컨테이너 크기에 따른 자동조절, 정렬 등이 가능 */
+    justify-content: center;  /* 가로축 방향으로 텍스트 중앙 정렬 */
+    align-items: center;  /* 세로축 방향으로 텍스트 중앙 정렬 */
+    position : relative;
+    z-index: 2;
+}
+
+.btn-align-container {
+    display: flex;
+    gap: 10px; /* 가지고 있는 요소들 간의 간격 */
+}
+
+.button-start {
+    max-width: 50%;  /* 원하는 최대 너비 값을 설정하세요 */
+    display: block;    /* block으로 설정하여 버튼의 너비가 내용물의 너비에 맞게 조정되도록 합니다 */
+    height: 50px;
+}
+
+/* 말풍선 넓이랑 높이를 텍스트 길이에 따라 자동으로 변경하려면 css 활용 */
+.bubble 
+{
+position: relative;
+max-width: 40%; /* 최대 넓이를 설정  */
+padding: 20px 20px;
+/* 위아래 20px, 좌우 20px */
+background: #EEFFFF;
+display: inline-block; /* 말풍선의 넓이를 내용물의 크기에 맞게 조절하고, 인라인 레벨 요소처럼 해당 요소를 가로로 나열할 수 있다. 세로로 나열되길 원한다면, 말풍선 요소에 대한 부모 요소(컨테이너)에서 적절한 스타일을 적용하기로. */
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+margin-bottom: 10px; /* 말풍선 간 간격 추가 */
+}
+
+.botname {
+    margin-top: 5%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    /* flex가 아닌 녀석 중앙정렬하는 법 transform과 marginLeft 혼합사용 */
+    padding: 1vh 10vw;
+    background: #EEFFFF;
+    display: inline-block; /* 말풍선의 넓이를 내용물의 크기에 맞게 조절하고, 인라인 레벨 요소처럼 해당 요소를 가로로 나열할 수 있다. 세로로 나열되길 원한다면, 말풍선 요소에 대한 부모 요소(컨테이너)에서 적절한 스타일을 적용해야 하낟. */
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.user-bubble 
+{
+align-self: flex-end;  /* 부모 div가 display:flex 속성을 쓰고 있다면 float:right로는 오른쪽으로 안가서 이걸 추가  */
+float: right;  /* 이거 하나로 오른쪽 끝으로 */
+position: relative;
+max-width: 40%; /* 최대 넓이를 설정  */
+padding: 20px 20px;
+/* 위아래 20px, 좌우 20px */
+background: #b0e5ff;
+display: inline-block; /* 말풍선의 넓이를 내용물의 크기에 맞게 조절하고, 인라인 레벨 요소처럼 해당 요소를 가로로 나열할 수 있다. 세로로 나열되길 원한다면, 말풍선 요소에 대한 부모 요소(컨테이너)에서 적절한 스타일을 적용해야 하낟. */
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+margin-bottom: 10px; /* 말풍선 간 간격 추가 */
+}
+
+.chat-container {
+    width:300px;
+}
+
+.bubble:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0px 0px 0px 0;
+border-color: transparent #EEFFFF;
+display: block;
+width: 0;
+z-index: 1;
+margin-top: -0px;
+left: -0px;
+top: 0%;
+}
+
+.chat-contents {
+
+    display: grid;
+    place-items: center;
+}
